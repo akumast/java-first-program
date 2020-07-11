@@ -163,8 +163,8 @@ public class Module2_Test {
         main.invoke(null, (Object) null);
 
         List<String> outputList = Arrays.stream(getOutput().split("\n")).collect(Collectors.toList());
-        assertEquals("Enter your name", outputList.get(0));
-        assertEquals("Hello " + name, outputList.get(1));
+        assertEquals("Enter your name", outputList.get(0).trim());
+        assertEquals("Hello " + name, outputList.get(1).trim());
     }
 
     @Test
@@ -265,11 +265,11 @@ public class Module2_Test {
 
             assertEquals(4, outputList.size(), "There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing best available rates (strictly in this order!)");
 
-            assertEquals("Enter your name", outputList.get(0));
-            assertEquals("Hello " + name, outputList.get(1));
+            assertEquals("Enter your name", outputList.get(0).trim());
+            assertEquals("Hello " + name, outputList.get(1).trim());
 
-            assertEquals("Enter the loan term (in years)", outputList.get(2));
-            assertEquals("Best Available Rate: 3.45%", outputList.get(3));
+            assertEquals("Enter the loan term (in years)", outputList.get(2).trim());
+            assertEquals("Best Available Rate: 3.45%", outputList.get(3).trim());
 
         }
         {
@@ -288,11 +288,11 @@ public class Module2_Test {
 
             assertEquals(4, outputList.size(),  "There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing no available rates for term (strictly in this order!)");
 
-            assertEquals("Enter your name", outputList.get(0));
-            assertEquals("Hello " + name, outputList.get(1));
+            assertEquals("Enter your name", outputList.get(0).trim());
+            assertEquals("Hello " + name, outputList.get(1).trim());
 
-            assertEquals("Enter the loan term (in years)", outputList.get(2));
-            assertEquals("No available rates for term: " + loanTermInYears + " years", outputList.get(3));
+            assertEquals("Enter the loan term (in years)", outputList.get(2).trim());
+            assertEquals("No available rates for term: " + loanTermInYears + " years", outputList.get(3).trim());
 
         }
     }
