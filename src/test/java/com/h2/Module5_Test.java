@@ -293,6 +293,7 @@ public class Module5_Test {
         assertEquals(1, parameterTypes.length, methodName + " must accept 1 parameter.");
         assertEquals(String[].class, parameterTypes[0], methodName + " must accept only 1 parameter of type 'String[]'");
     }
+
     @Test
     public void m5_09_testFinanceMainMethodWorksCorrectly() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         final String methodName = "main";
@@ -304,7 +305,6 @@ public class Module5_Test {
         final Method[] methods = aClass.getDeclaredMethods();
         final List<Method> filteredMethod = Arrays.stream(methods).filter(method -> method.getName().equals(methodName)).collect(Collectors.toList());
         assertEquals(1, filteredMethod.size(), classToFind + " should contain a method called '" + methodName + "'");
-
 
 
         Method method = aClass.getMethod("main", String[].class);

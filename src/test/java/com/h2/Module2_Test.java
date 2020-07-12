@@ -286,7 +286,7 @@ public class Module2_Test {
 
             List<String> outputList = Arrays.stream(getOutput().split("\n")).collect(Collectors.toList());
 
-            assertEquals(4, outputList.size(),  "There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing no available rates for term (strictly in this order!)");
+            assertEquals(4, outputList.size(), "There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing no available rates for term (strictly in this order!)");
 
             assertEquals("Enter your name", outputList.get(0).trim());
             assertEquals("Hello " + name, outputList.get(1).trim());
